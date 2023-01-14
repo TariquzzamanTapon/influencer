@@ -1,0 +1,257 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary-color:
+    #3A3A3A;
+    --secondery-color:#E02C6D;
+    --light-color:#6C6C6C;
+}
+img{
+    width:100%;
+}
+
+/* heading start */
+.container{
+    width:80%;
+    margin:0px auto;
+    align-items:center;
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:90px 0px;
+}
+nav ul{
+    width: 40%;
+    display:flex;
+    justify-content:space-between;
+}
+nav ul li{
+    list-style:none;
+}
+nav ul li a{
+    text-decoration: none;
+}
+
+/* banner section */
+.banner{
+    display:flex;
+    align-items: center;
+    background-image: url('../images/Circle.svg');
+    background-repeat: no-repeat;
+    background-position:bottom right;
+}
+.banner-details h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    margin-bottom:16px;
+}
+.banner-details p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color:var(--light-color);
+    margin-bottom:16px;
+}
+.banner-details button{
+    background: #E02C6D;
+    border-radius: 41px;
+    color:white;
+    width: 196px;
+    height: 44px;
+    border:none;
+}
+
+/* images__section */
+.images__section img{
+    width:100%;
+    margin-top:50px;
+}
+
+.images__section{
+    gap:60px;
+    padding:10px 30px;
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    align-items: center;
+}
+/* popular collection */
+.popular__collection{
+    margin:50px 0px;
+    /* background:pink; */
+}
+.popular__title{
+    text-align: center;
+    padding:30px 0px;
+    font-size:30px;
+}
+
+.collections{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    row-gap:25px;
+}
+.collection__item{
+    padding:30px;
+    border-radius:5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.collection__item .collections__title{
+    font-weight: 700;
+    font-size: 28px;
+    margin-top:13px;
+}
+.collection__item .collections__desc{
+    margin:9px 0px;
+}
+.collection__item .icons i{
+    color:orange;
+}
+.collection__item .icons span{
+    margin-left:10px;
+}
+.collection__item p{
+    color:var(--light-color);
+    margin-top:10px;
+}
+.popular__collection .see__more{
+    margin-top:20px;
+    padding:10px 15px;
+    color: rgba(224, 44, 109, 0.87);
+    font-weight: 700;
+    font-size: 16px;
+    border:none;
+    background:none;
+    cursor: pointer;
+}
+
+/*  featured products at one */
+.products{
+    margin:50px 0px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.products .product__img{
+    width:40%;
+}
+.products .product__details{
+    width:60%;
+    padding-left:35px;
+}
+.product__details .product__title{
+    font-weight:700;
+    color:var(--primary-color);
+    margin-bottom: 10px;
+    font-size:40px;
+}
+.product__details .product__desc{
+    margin-bottom:10px;
+    color:var(--light-color);
+}
+.product__details .product__btn{
+    background: #E02C6D;
+    color:white;
+    width: 196px;
+    height: 44px;
+    border:none;
+
+}
+/* footer section */
+footer{
+    margin-top:20px;
+    padding:60px;
+    background:#0A0826;
+    color:white;
+    text-align: center;
+}
+footer .footer__icons{
+    margin-top:10px;
+}
+footer a{
+    text-decoration: none;
+
+}
+footer a i{
+    color: white;
+    font-size:20px;
+    margin-left:5px;
+}
+footer a i:hover{
+    color:rgba(221, 235, 33, 0.842);
+}
+footer h3,
+footer p{
+    margin-bottom:6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:667px) {
+    nav .logo{
+        text-align:center;
+    }
+    nav ul{
+        display:none;
+    }
+   .logo h2{
+        font-size:28px;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+        text-align: center;
+        background-position:top;
+    }
+    .banner h2{
+        font-size:28px;
+    }
+
+    /* images section */
+    .images__section{
+        margin-top:14px;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* collections  */
+    .collections {
+        grid-template-columns:repeat(1, 1fr);
+    }
+    .collection__item{
+        margin:0px auto;
+    }
+
+    /* products */
+    .products{
+        flex-direction:column-reverse;
+    }
+    .products .product__img{
+        width:100%;
+        margin-top:15px;
+    }
+    .products .product__details{
+        width:100%;
+        padding-left:0px;
+        text-align: center;
+    }
+}
